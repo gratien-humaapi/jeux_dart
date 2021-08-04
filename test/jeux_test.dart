@@ -2,7 +2,7 @@
 // import 'package:test/test.dart';
 
 // void main() {
-//   test('calculate', () {
-//     expect(calculate(), 42);
+//   test('machin', () {
+//     expect(machin(40, 4, 4), '');
 //   });
 // }
