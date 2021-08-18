@@ -5,15 +5,15 @@ void main() {
   // machin(10, 2, 3);
 
   print('Entrer le nombre de joueurs');
-  var n = stdin.readLineSync();
+  var nombreJoueur = stdin.readLineSync();
   print('Entrer la valeur max du nombre aleatoire');
-  var l = stdin.readLineSync();
+  var nombreMax = stdin.readLineSync();
   print('Entrer le nombre de credit');
-  var c = stdin.readLineSync();
+  var nombreCredit = stdin.readLineSync();
 
-  var jeux = Jeu(int.parse(l!), int.parse(n!), int.parse(c!));
+  var jeux = Jeu(int.parse(nombreJoueur!), int.parse(nombreCredit!));
 
   jeux.listJoueur();
 
-  jeux.machin(int.parse(l));
+  jeux.main(int.parse(nombreMax!));
 }
