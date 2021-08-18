@@ -134,17 +134,23 @@ class Jeu extends Joueur {
           }
         }
       }
-      if (counter == tours) {
+      if (counter == tours && win == 0) {
         print("Aucun des joueurs n'a gagné \n Le nombre était $nombre");
       }
       print('Voulez vous recommencer le jeu o pour oui n pour non');
       end = stdin.readLineSync()!;
     }
+    var x = [];
+    for (var i in score_Cumul) {
+      x.add(i);
+    }
+    x.sort((a, b) => b - a);
     print('Nombre de Match $nombre_Match');
-    print('Joueur \t \t  Score ');
+    print('Joueur  \t  Score \t Rang ');
     for (var i = 0; i < n_Joueur; i++) {
-      stdout.write('${p_Name[i]}  \t \t');
-      stdout.write('${score_Cumul[i]} \n');
+      stdout.write('${p_Name[i]} \t \t');
+      stdout.write('${score_Cumul[i]} \t \t');
+      stdout.write('${x.indexOf(score_Cumul[i]) + 1} \n');
     }
   }
 }
